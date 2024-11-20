@@ -1,0 +1,26 @@
+{
+  "name": "react-scroll-into-view",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "972716557@qq.com",
+  "keywords": [
+    "react",
+    "scroll-into-view-if-needed",
+    "scroll",
+    "scroll-into-view",
+    "rc-scroll-into-view",
+    "react-scroll-into-view"
+  ],
+  "license": "ISC",
+  "description": "解决异步情况dom没有渲染出来，scrollIntoView失效的情况",
+  "devDependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "dependencies": {
+    "ahooks": "^3.8.1"
+  }
+}
