@@ -82,7 +82,7 @@ export default App;
 | Property | Description | Type | Default |  Version |
 | --- | --- | --- | --- |  --- |
 | selector | The scroll element you want to match | `string` | -- | 1.0.0 |
-| scrollOptions | [The scrollIntoViewOptions details to see](https://developer.mozilla.org/zh-CN/docs/Web/API/Element/scrollIntoView)   | `ScrollIntoViewOptions` | -- | 1.0.0 |
+| scrollOptions | [The scrollIntoViewOptions details to see](https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollIntoView)   | `ScrollIntoViewOptions` | -- | 1.0.0 |
 | isScrollable | Whether to scroll | `boolean` |  -- | 1.0.0 |
 | scrollRef | The ref you want to scroll | `MutableRefObject<HTMLElement \| null>` | -- | 1.0.0 |
 | target | The parent container is responsible for determining when it is necessary to cease monitoring the size changes of the element. | `Element` \| `() => Element` \| `MutableRefObject<Element>` | `document` | 1.0.0 |
