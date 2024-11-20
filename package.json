@@ -25,7 +25,7 @@
     "react-scroll-into-view"
   ],
   "license": "ISC",
-  "description": "解决异步情况dom没有渲染出来，scrollIntoView失效的情况",
+  "description": "to solve the JS scrollIntoView failed when async scrolling",
   "devDependencies": {
     "@babel/cli": "^7.25.9",
     "@babel/core": "^7.26.0",

@@ -1,5 +1,5 @@
 
-A thin react component wrapper bundled with the fantastic [rc-scroll-into-view](https://github.com/972716557/rc-scroll-into-view).
+When a node has not been rendered, but this time the js native scrollIntoView is called; Or the node may have been generated and the method successfully called, but it was bumped off by another late-loaded element, causing scrollIntoView to fail. This library is designed to solve this situation, Mom no longer have to worry about scrollIntoView failure!!![rc-scroll-into-view](https://github.com/972716557/rc-scroll-into-view).
 
 ## Install
 

@@ -1,5 +1,5 @@
 
-A thin react component wrapper bundled with the fantastic [rc-scroll-into-view](https://github.com/972716557/rc-scroll-into-view).
+当某一个节点还没有渲染出来，但这个时候又调用了js 原生的scrollIntoView；或者这个节点已经生成，方法也成功调用，但是又被其他晚加载的元素顶掉了，导致scrollIntoView失效。这个库就是用来解决这种情况，妈妈再也不用担心scrollIntoView失效了！！！  [rc-scroll-into-view](https://github.com/972716557/rc-scroll-into-view).
 
 ## Install
 
