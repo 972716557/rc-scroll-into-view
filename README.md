@@ -1,5 +1,5 @@
 
-A thin react component wrapper bundled with the fantastic [rc-scroll-into-view](https://www.npmjs.com/package/rc).
+A thin react component wrapper bundled with the fantastic [rc-scroll-into-view](https://github.com/972716557/rc-scroll-into-view).
 
 ## Install
 
