@@ -1,11 +1,16 @@
 {
   "name": "rc-scroll-into-view",
-  "version": "1.0.1",
-  "main": "index.js",
+  "version": "1.0.0",
+  "main": "src/index.jsx",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "972716557@qq.com",
+  "repository": "git@github.com:972716557/rc-scroll-into-view.git",
+  "peerDependencies": {
+    "ahooks": ">=3",
+    "react": ">=17"
+  },
   "keywords": [
     "react",
     "scroll-into-view-if-needed",
@@ -17,10 +22,10 @@
   "license": "ISC",
   "description": "解决异步情况dom没有渲染出来，scrollIntoView失效的情况",
   "devDependencies": {
+    "@babel/preset-env": "^7.26.0",
+    "@babel/preset-react": "^7.25.9",
+    "ahooks": "^3.8.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
-  },
-  "dependencies": {
-    "ahooks": "^3.8.1"
   }
 }
