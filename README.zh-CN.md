@@ -25,7 +25,7 @@ const App = () => {
 export default App;
 ```
 
-## use selector
+## 使用 selector
 
 ```jsx
 import React from 'react';
@@ -38,7 +38,7 @@ const App = () => (
 export default App;
 ```
 
-## use ref
+## 使用 ref
 
 ```jsx
 import React, { useRef } from 'react';
@@ -54,7 +54,7 @@ const App = () => {
 export default App;
 ```
 
-## use target
+## 使用 target
 
 ```jsx
 import React, { useRef } from 'react';
@@ -66,9 +66,10 @@ const App = () => {
     <ScrollInto
       scrollRef={ref}
       target={targetRef}
+      scrollOptions={{ block: 'center', behavior: 'smooth' }}
     >
       <div ref={targetRef}>
-        another child
+        这是另一个child
         <div ref={ref}>child</div>
       </div>
     </ScrollInto>
@@ -79,11 +80,11 @@ export default App;
 
 ## API
 
-| Property | Description | Type | Default |  Version |
-| --- | --- | --- | --- |  --- |
-| selector | The scroll element you want to match | `string` | -- | 1.0.0 |
-| scrollOptions | [The scrollIntoViewOptions details to see](https://developer.mozilla.org/zh-CN/docs/Web/API/Element/scrollIntoView)   | `ScrollIntoViewOptions` | -- | 1.0.0 |
-| isScrollable | Whether to scroll | `boolean` |  -- | 1.0.0 |
-| scrollRef | The ref you want to scroll | `MutableRefObject<HTMLElement \| null>` | -- | 1.0.0 |
-| target | The parent container is responsible for determining when it is necessary to cease monitoring the size changes of the element. | `Element` \| `() => Element` \| `MutableRefObject<Element>` | `document` | 1.0.0 |
+| 属性 | 说明 | 类型 | 默认值 |  版本 |
+| --- | --- | --- | --- | --- |
+| selector | 需要滚动的选择器字段 | `string` | -- | 1.0.0 |
+| scrollOptions | [滚动属性配置](https://developer.mozilla.org/zh-CN/docs/Web/API/Element/scrollIntoView) | `ScrollIntoViewOptions` | -- | 1.0.0 |
+| isScrollable | 是否需要滚动 | `boolean` | -- | 1.0.0 |
+| scrollRef | 需要滚动的元素的 ref | `MutableRefObject<HTMLElement \| null>` | -- | 1.0.0 |
+| target | 父节点：用来判断什么时候停止监听页面是否发生改变 | `Element` \| `() => Element` \| `MutableRefObject<Element>` | `document` | 1.0.0 |
 
