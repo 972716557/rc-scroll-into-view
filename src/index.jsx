@@ -33,7 +33,7 @@ const ScrollInto = ({
   };
 
   useEffect(() => {
-    if (_isScrollable !== undefined) {
+    if (typeof _isScrollable === "undefined") {
       setIsScrollable(_isScrollable);
     }
   }, [_isScrollable]);
