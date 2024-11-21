@@ -1,12 +1,12 @@
 {
   "name": "rc-scroll-into-view",
-  "version": "1.0.6",
+  "version": "1.0.9",
   "main": "lib/index.js",
   "scripts": {
     "test": "jest",
     "build": "webpack --config ./webpack.config.js",
     "transpile": "npx babel src --out-dir lib",
-    "prepublish": "npm run build"
+    "prepublish": "npx babel src --out-dir lib"
   },
   "author": "972716557@qq.com",
   "repository": {
@@ -25,9 +25,9 @@
     "rc-scroll-into-view",
     "react-scroll-into-view"
   ],
-  "files": ["lib/"],
+  "files": ["lib/**/*.js","!lib/**/__tests__/**/*.js"],
   "license": "ISC",
-  "description": "to solve the JS scrollIntoView failed when async scrolling",
+  "description": "Solving the issue of scrollIntoView failing during asynchronous scrolling in JavaScript.",
   "devDependencies": {
     "@babel/cli": "^7.25.9",
     "@babel/core": "^7.26.0",
