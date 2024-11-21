@@ -1,5 +1,6 @@
 const path = require("path");
 const resolvePath = (relativePath) => path.resolve(__dirname, relativePath);
+const TerserPlugin = require("terser-webpack-plugin");
 
 const baseConfig = {
   entry: resolvePath("./src/index.jsx"),
@@ -8,6 +9,10 @@ const baseConfig = {
     path: resolvePath("./dist"),
     filename: "[name].js",
     clean: true,
+  },
+  optimization: {
+    minimize: true,
+    minimizer: [new TerserPlugin()],
   },
   module: {
     rules: [

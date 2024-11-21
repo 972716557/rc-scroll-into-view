@@ -1,10 +1,11 @@
 {
   "name": "rc-scroll-into-view",
-  "version": "1.0.3",
+  "version": "1.0.6",
   "main": "lib/index.js",
   "scripts": {
     "test": "jest",
     "build": "webpack --config ./webpack.config.js",
+    "transpile": "npx babel src --out-dir lib",
     "prepublish": "npm run build"
   },
   "author": "972716557@qq.com",
@@ -24,6 +25,7 @@
     "rc-scroll-into-view",
     "react-scroll-into-view"
   ],
+  "files": ["lib/"],
   "license": "ISC",
   "description": "to solve the JS scrollIntoView failed when async scrolling",
   "devDependencies": {
@@ -39,6 +41,8 @@
     "jest-environment-jsdom": "^29.7.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "terser": "^5.36.0",
+    "terser-webpack-plugin": "^5.3.10",
     "webpack": "^5.96.1",
     "webpack-cli": "^5.1.4"
   }
