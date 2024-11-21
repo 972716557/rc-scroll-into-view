@@ -1,6 +1,6 @@
 {
   "name": "rc-scroll-into-view",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "main": "lib/index.js",
   "scripts": {
     "test": "jest",
