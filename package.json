@@ -1,12 +1,14 @@
 {
   "name": "rc-scroll-into-view",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "main": "dist/index.cjs.js",
   "module": "dist/index.js",
   "type": "module",
   "scripts": {
     "test": "jest",
-    "build": "rollup -c"
+    "build": "rollup -c",
+    "prepublishOnly": "npm run build",
+    "publish": "npm publish"
   },
   "author": "972716557@qq.com",
   "repository": {
@@ -27,7 +29,9 @@
     "react-scroll-into-view"
   ],
   "files": [
-    "dist"
+    "dist/**",
+    "!dist/node_modules",
+    "!dist/_virtual"
   ],
   "license": "ISC",
   "description": "Solving the issue of scrollIntoView failing during asynchronous scrolling in JavaScript.",
@@ -36,6 +40,7 @@
     "@babel/core": "^7.26.0",
     "@babel/preset-env": "^7.26.0",
     "@babel/preset-react": "^7.27.1",
+    "@rollup/plugin-babel": "^6.0.4",
     "@rollup/plugin-commonjs": "^28.0.3",
     "@rollup/plugin-node-resolve": "^16.0.1",
     "@testing-library/react": "^16.0.1",
@@ -47,11 +52,10 @@
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "rollup": "^4.41.1",
+    "rollup-plugin-cleaner": "^1.0.0",
+    "rollup-plugin-delete": "^3.0.1",
     "rollup-plugin-terser": "^7.0.2",
     "terser": "^5.36.0",
     "terser-webpack-plugin": "^5.3.10"
-  },
-  "dependencies": {
-    "@rollup/plugin-babel": "^6.0.4"
   }
 }
