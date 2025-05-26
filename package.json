@@ -1,12 +1,12 @@
 {
   "name": "rc-scroll-into-view",
   "version": "1.0.9",
-  "main": "lib/index.js",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.js",
+  "type": "module",
   "scripts": {
     "test": "jest",
-    "build": "webpack --config ./webpack.config.js",
-    "transpile": "npx babel src --out-dir lib",
-    "prepublish": "npx babel src --out-dir lib"
+    "build": "rollup -c"
   },
   "author": "972716557@qq.com",
   "repository": {
@@ -15,7 +15,8 @@
   },
   "peerDependencies": {
     "ahooks": ">=3",
-    "react": ">=17"
+    "react": ">=17",
+    "react-dom": ">=17"
   },
   "keywords": [
     "react",
@@ -25,14 +26,18 @@
     "rc-scroll-into-view",
     "react-scroll-into-view"
   ],
-  "files": ["lib/**/*.js","!lib/**/__tests__/**/*.js"],
+  "files": [
+    "dist"
+  ],
   "license": "ISC",
   "description": "Solving the issue of scrollIntoView failing during asynchronous scrolling in JavaScript.",
   "devDependencies": {
     "@babel/cli": "^7.25.9",
     "@babel/core": "^7.26.0",
     "@babel/preset-env": "^7.26.0",
-    "@babel/preset-react": "^7.25.9",
+    "@babel/preset-react": "^7.27.1",
+    "@rollup/plugin-commonjs": "^28.0.3",
+    "@rollup/plugin-node-resolve": "^16.0.1",
     "@testing-library/react": "^16.0.1",
     "ahooks": "^3.8.1",
     "babel-cli": "^6.26.0",
@@ -41,9 +46,12 @@
     "jest-environment-jsdom": "^29.7.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "rollup": "^4.41.1",
+    "rollup-plugin-terser": "^7.0.2",
     "terser": "^5.36.0",
-    "terser-webpack-plugin": "^5.3.10",
-    "webpack": "^5.96.1",
-    "webpack-cli": "^5.1.4"
+    "terser-webpack-plugin": "^5.3.10"
+  },
+  "dependencies": {
+    "@rollup/plugin-babel": "^6.0.4"
   }
 }
