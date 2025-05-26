@@ -1,3 +1,6 @@
-module.exports = {
-  testEnvironment: "jest-environment-jsdom",
+export default {
+  transform: {
+    "^.+\\.(js|jsx|ts|tsx)$": "babel-jest",
+  },
+  testEnvironment: "jsdom",
 };

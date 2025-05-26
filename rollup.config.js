@@ -24,13 +24,6 @@ export default {
     // 构建前清空输出目录
     del({ targets: "dist/*" }),
 
-    // 正确配置 node-resolve 插件
-    nodeResolve({
-      // 禁止将依赖复制到输出目录
-      moduleDirectories: ["node_modules"],
-      preferBuiltins: true,
-    }),
-
     commonjs(),
 
     typescript({

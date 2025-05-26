@@ -49,7 +49,7 @@ const ScrollInto: FC<ScrollIntoViewProps> = ({
   };
 
   useEffect(() => {
-    if (typeof _isScrollable === "undefined") {
+    if (typeof _isScrollable !== "undefined") {
       setIsScrollable(_isScrollable);
     }
   }, [_isScrollable]);
