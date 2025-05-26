@@ -1,12 +1,28 @@
 import { useDebounceEffect, useSize } from "ahooks";
-import React, { useEffect, useRef, useState } from "react";
+import type { MutableRefObject } from "react";
+import React, { useEffect, useRef, useState, HTMLAttributes, FC } from "react";
 import getTarget from "./getTarget";
 
-const ScrollInto = ({
+type TargetType = HTMLElement | Element | Window | Document;
+
+type TargetValue<T> = T | undefined | null;
+
+export type BasicTarget<T extends TargetType = Element> =
+  | TargetValue<T>
+  | MutableRefObject<TargetValue<T>>;
+export interface ScrollIntoViewProps extends HTMLAttributes<HTMLElement> {
+  selector?: string;
+  scrollOptions?: ScrollIntoViewOptions;
+  isScrollable?: boolean;
+  scrollRef?: MutableRefObject<HTMLElement | null>;
+  target?: BasicTarget<Element | Document>;
+}
+
+const ScrollInto: FC<ScrollIntoViewProps> = ({
   children,
   selector,
   scrollOptions = {},
-  isScrollable: _isScrollable,
+  isScrollable: _isScrollable = true,
   scrollRef,
   target,
   ...rest
@@ -26,7 +42,7 @@ const ScrollInto = ({
 
   const ref = useRef(null);
   const size = useSize(ref);
-  const [isScrollable, setIsScrollable] = useState(_isScrollable ?? true);
+  const [isScrollable, setIsScrollable] = useState(_isScrollable);
 
   const cancelObserve = () => {
     setIsScrollable(false);
