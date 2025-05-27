@@ -30,6 +30,7 @@ export default {
       tsconfig: "./tsconfig.json", // 指定 tsconfig
       declaration: true, // 生成 .d.ts 文件
       declarationDir: "dist/types", // 声明文件目录
+      exclude: ["**/__tests__/**"],
     }),
 
     babel({
